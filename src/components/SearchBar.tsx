@@ -1,5 +1,6 @@
-import React from 'react';
+import { useState } from 'react';
 import { useForm, SubmitHandler } from 'react-hook-form';
+import { FiSearch } from 'react-icons/fi';
 
 interface SearchBarProps {
   onSearch: (query: string) => void;
@@ -10,7 +11,8 @@ interface IFormInput {
 }
 
 const SearchBar: React.FC<SearchBarProps> = ({ onSearch }) => {
-  const { register, handleSubmit, formState: { errors } } = useForm<IFormInput>();
+  const { register, handleSubmit} = useForm<IFormInput>();
+  const [query, setQuery] = useState('');
 
   const onSubmit: SubmitHandler<IFormInput> = data => {
     onSearch(data.searchTerm);
@@ -19,16 +21,17 @@ const SearchBar: React.FC<SearchBarProps> = ({ onSearch }) => {
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="flex justify-center mt-4">
       <div className="relative w-full max-w-xl">
-        <input
-          {...register("searchTerm", { required: true })}
-          className="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-full leading-5 bg-white placeholder-gray-500 focus:outline-none focus:placeholder-gray-400 focus:border-blue-500 focus:ring-blue-500 sm:text-sm md:text-lg md:py-3 md:px-4"
-          placeholder="Search for cocktails..."
-          type="search"
-        />
-        {errors.searchTerm && <span>This field is required</span>}
-        <button type="submit" className="absolute right-0 top-0 mt-2 mr-4">
-          {/* Icono de búsqueda y/o botón de envío */}
+        <button type="submit" className="absolute inset-y-0 left-0 pl-3 flex items-center text-gray-500">
+          <FiSearch className="w-5 h-5" />
         </button>
+        <input
+          {...register("searchTerm", { required: "This field is required" })}
+          className="block w-full pl-12 pr-3 py-2 border border-gray-300 rounded-full leading-5 bg-white placeholder-gray-500 focus:outline-none focus:placeholder-gray-400 focus:border-blue-500 focus:ring-blue-500 sm:text-sm md:text-lg lg:text-2xl"
+          placeholder="Search for ingredients..."
+          type="search"
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+        />
       </div>
     </form>
   );
