@@ -18,7 +18,19 @@
 
 .ludus-button:hover {
     background: linear-gradient(90deg, #2478BC 0%, #4EA199 48%, #75B97C 100%);
+    transition: background-color 0.3s ease; 
 }
+
+.ludus-button-random{
+    background: linear-gradient(90deg, #FE7F12 0%, #4EA199 52%, #75B97C 100%);
+    transition: background-color 0.3s ease; 
+}
+
+.ludus-button-random:hover{
+    background: linear-gradient(90deg, #75B97C 0%, #4EA199 52%, #FE7F12 100%);
+    transition: background-color 0.3s ease; 
+}
+
 
 
 

@@ -11,6 +11,7 @@ export default {
         "outfit": ['Outfit', 'sans-serif']
       },
       height: {
+        '1/4': '25vh',
         '1/3': '30vh',
       },
       colors:{
