@@ -37,6 +37,7 @@ export const RandomCocktailButton: React.FC<RandomCocktailButtonProps> = ({ setR
         <div className="flex justify-center items-center">
             <Confetti active={confettiActive} config={config} />
             <button
+                aria-label='Random Cocktail'
                 onClick={handleClick}
                 className={`flex items-center py-2 px-4 mt-2 ludus-button-random text-white font-bold rounded-full ${isLoading ? 'opacity-50 cursor-not-allowed' : ''}`}
             >

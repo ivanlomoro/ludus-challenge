@@ -19,7 +19,7 @@ export const SearchBar: React.FC<SearchBarProps> = ({ onSearch }) => {
   return (
       <form onSubmit={handleSubmit(onSubmit)} className="flex justify-center mt-4">
         <div className="relative w-full max-w-xl">
-          <button type="submit" className="absolute inset-y-0 left-0 pl-3 flex items-center text-gray-500">
+          <button type="submit" className="absolute inset-y-0 left-0 pl-3 flex items-center text-gray-500" aria-label='Search'>
             <FiSearch className="w-5 h-5" />
           </button>
           <input
