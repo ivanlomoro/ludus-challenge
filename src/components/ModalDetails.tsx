@@ -9,13 +9,13 @@ export const ModalDetails: React.FC<ModalDetailsProps> = ({ isOpen, onClose, chi
 
     return (
         <div className="fixed inset-0 bg-black bg-opacity-50 backdrop-filter backdrop-blur-sm flex justify-center items-center z-50">
-            <div className="bg-white p-5 rounded-lg shadow-lg flex flex-col items-start max-w-lg w-full">
+            <div className="ludus-bg-modal p-5 rounded-lg shadow-lg flex flex-col items-start max-w-lg w-full">
                 {children}
                 <button
-                    className="mt-4 self-end px-4 py-2 bg-red-500 text-white rounded hover:bg-red-700 transition duration-300"
+                    className="mt-4 self-end px-9 py-2 ludus-button text-white font-outfit font-normal text-lg rounded-3xl"
                     onClick={onClose}
                 >
-                    Cerrar
+                    Close
                 </button>
             </div>
         </div>

@@ -6,8 +6,15 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily:{
+        "forum" : ['Forum', 'sans-serif'],
+        "outfit": ['Outfit', 'sans-serif']
+      },
+      height: {
+        '1/3': '30vh',
+      },
       colors:{
-        primary:'#A855F7',
+        primary:'#154D49',
       }
     },
   },

@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import SearchBar from './components/SearchBar';
 import './index.css';
 import { CocktailList } from './components/CocktailList';
+import { Header } from './components/Header';
 
 function App() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -13,7 +13,7 @@ function App() {
 
   return (
     <>
-      <SearchBar onSearch={handleSearch} />
+      <Header onSearch={handleSearch} />
       <CocktailList ingredient={searchTerm} />
     </>
   );

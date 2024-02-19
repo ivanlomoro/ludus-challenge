@@ -26,8 +26,8 @@ import { CocktailDetails } from "../components/CocktailCard";
 
 export const getLimitedDrinkName = (name: string) => {
     const words = name.split(' ');
-    if (words.length > 3) {
-        return words.slice(0, 3).join(' ') + '...';
+    if (words.length > 2) {
+        return words.slice(0, 2).join(' ') + '...';
     }
     return name;
 };
