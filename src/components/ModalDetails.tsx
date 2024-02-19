@@ -12,7 +12,7 @@ export const ModalDetails: React.FC<ModalDetailsProps> = ({ isOpen, onClose, chi
             <div className="ludus-bg-modal p-5 rounded-lg shadow-lg flex flex-col items-start max-w-lg w-full">
                 {children}
                 <button
-                    className="mt-4 self-end px-9 py-2 ludus-button text-white font-outfit font-normal text-lg rounded-3xl"
+                    className="mt-4 self-end px-9 py-2 ludus-button text-white font-outfit font-normal md:text-sm 2xl:text-md rounded-3xl"
                     onClick={onClose}
                 >
                     Close
