@@ -4,6 +4,8 @@ import { CocktailList } from './components/CocktailList';
 import { Header } from './components/Header';
 import { RandomCocktailButton } from './components/RandomCocktailButton';
 import { CocktailCard, CocktailDetails } from './components/CocktailCard';
+import { Toaster } from 'react-hot-toast';
+
 
 function App() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -16,14 +18,15 @@ function App() {
 
   return (
     <>
+      <Toaster />
       <Header onSearch={handleSearch} />
       <RandomCocktailButton setRandomCocktail={setRandomCocktail} />
       {randomCocktail ? (
-      <div className="flex justify-center items-center p-4">
-        <div className="sm:max-w-sm md:max-w-64 lg:max-w-64 2xl:max-w-sm">
-          <CocktailCard details={randomCocktail} />
+        <div className="flex justify-center items-center p-4">
+          <div className="sm:max-w-sm md:max-w-64 lg:max-w-64 2xl:max-w-sm">
+            <CocktailCard details={randomCocktail} />
+          </div>
         </div>
-      </div>
       ) : (
         <CocktailList ingredient={searchTerm} />
       )}
