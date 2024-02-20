@@ -33,11 +33,11 @@ export const CocktailCard: React.FC<CocktailCardProps> = ({ details }) => {
                     </div>
                 )}
                 <div className="px-6 py-4">
-                    <div className="font-normal font-forum md:text-md 2xl:text-lg mb-2">{getLimitedDrinkName(details.strDrink)}</div>
+                    <div className="font-normal font-forum sm:text-lg md:text-sm 2xl:text-lg mb-2">{getLimitedDrinkName(details.strDrink)}</div>
                     <div className="text-center">
                         <button
                             aria-label="See details"
-                            className="mt-4 px-9 py-2 ludus-button text-white font-outfit font-normal lg:text-md rounded-3xl"
+                            className="mt-4 px-5 py-2 ludus-button text-white font-outfit font-normal md:text-md  rounded-3xl"
                             onClick={toggleModal}
                         >
                             See details
