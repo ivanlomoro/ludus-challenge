@@ -52,7 +52,7 @@ Además, puede encontrar un ejemplo del .env en el archivo denominado env.exampl
 
 ## Deployment
 
-Puedes probar la aplicación accediendo a este enlace [Ludus-Challenge](https://ludus-challenge.vercel.app/).
+Puedes probar la aplicación accediendo a este enlace <a href="https://ludus-challenge.vercel.app/" target="_blank">Ludus-Challenge</a>.
 
 ## Documentación de la API de TheCocktailDB
 
