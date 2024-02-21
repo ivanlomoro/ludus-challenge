@@ -34,6 +34,7 @@ Ludus-Challenge es una aplicación web desarrollada como parte de una prueba té
 VITE_API_BASE_URL=https://www.thecocktaildb.com/api/json/v1/1
 ```
 Además, puede encontrar un ejemplo del .env en el archivo denominado env.example. Este archivo sirve como plantilla para su configuración.
+
 6. Ejecute el servidor de desarrollo: `pnpm run dev`
 
 ## Tecnologías utilizadas
