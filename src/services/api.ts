@@ -4,7 +4,7 @@ const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 
 export const fetchCocktailsByIngredient = async (ingredient: string) => {
     const response = await axios.get(`${API_BASE_URL}/filter.php?i=${ingredient}`);
-    const limitedResults = response.data.drinks.slice(0, 6);
+    const limitedResults = response.data.drinks.slice(0, 12);
     return limitedResults;
 };
 
